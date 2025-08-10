@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Button } from '../../../components/ui/button';
-import { Input } from '../../../components/ui/input';
-import { Label } from '../../../components/ui/label';
+import { Button } from '../../components/ui/button';
+import { Input } from '../../components/ui/input';
+import { Label } from '../../components/ui/label';
 import { TestCredentialsDialog } from '../../components/auth/TestCredentialsDialog';
 import { Shield, Lock, Users, Activity } from 'lucide-react';
 import loginImage from 'figma:asset/d9ba2c6d161d85ab050cc0dc81f4f91d8e70e022.png';

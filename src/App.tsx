@@ -7,8 +7,8 @@ import { SuperAdminDashboard } from './pages/admin/SuperAdminDashboard';
 
 export default function App() {
   return (
-    <AuthProvider>
-      <Router>
+    <Router>
+      <AuthProvider>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route 
@@ -59,7 +59,7 @@ export default function App() {
             } 
           />
         </Routes>
-      </Router>
-    </AuthProvider>
+      </AuthProvider>
+    </Router>
   );
 }

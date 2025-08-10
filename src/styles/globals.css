@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
-@custom-variant dark (&:is(.dark *));
+/* Dark mode variant - removed for Tailwind v3 compatibility */
 
 @layer base {
   :root {
@@ -72,7 +72,7 @@
 
   /* SMART BROWSER RESET - Target specific elements, not everything */
   * {
-    @apply border-border;
+    border-color: var(--border);
     box-sizing: border-box !important;
   }
 
@@ -143,4 +143,3 @@
   }
 }
 
-/* Copy the rest of the existing globals.css content here... */
