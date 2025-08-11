@@ -1,0 +1,180 @@
+/* Button Component CSS Module */
+/* This file demonstrates component-specific styling using CSS modules */
+
+.buttonContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Button Size Variants */
+.buttonSmall {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+}
+
+.buttonMedium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.buttonLarge {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  border-radius: 0.75rem;
+}
+
+/* Button Style Variants */
+.buttonPrimary {
+  background: linear-gradient(135deg, var(--scan-primary-blue), #1e40af);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(41, 65, 153, 0.15);
+}
+
+.buttonPrimary:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(41, 65, 153, 0.3);
+}
+
+.buttonSecondary {
+  background: linear-gradient(135deg, var(--scan-secondary-orange), #ea580c);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(255, 158, 30, 0.15);
+}
+
+.buttonSecondary:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 158, 30, 0.3);
+}
+
+.buttonOutline {
+  background: transparent;
+  color: var(--scan-primary-blue);
+  border: 2px solid var(--scan-primary-blue);
+}
+
+.buttonOutline:hover {
+  background: var(--scan-primary-blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.buttonGhost {
+  background: transparent;
+  color: var(--scan-text-gray);
+}
+
+.buttonGhost:hover {
+  background: var(--scan-light-gray);
+  color: var(--scan-text-dark);
+}
+
+/* Button State Variants */
+.buttonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.buttonLoading {
+  position: relative;
+  color: transparent;
+}
+
+.buttonLoading::after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Button Icon Styles */
+.buttonIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.buttonIconLeft {
+  margin-right: 0.5rem;
+}
+
+.buttonIconRight {
+  margin-left: 0.5rem;
+}
+
+/* Button Group Styles */
+.buttonGroup {
+  display: inline-flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.buttonGroup .buttonContainer {
+  border-radius: 0;
+  border-right: 1px solid var(--scan-border-gray);
+}
+
+.buttonGroup .buttonContainer:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.buttonGroup .buttonContainer:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-right: none;
+}
+
+/* Button Animation Keyframes */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button Focus States */
+.buttonContainer:focus-visible {
+  outline: 2px solid var(--scan-primary-blue);
+  outline-offset: 2px;
+}
+
+/* Button Responsive Adjustments */
+@media (max-width: 640px) {
+  .buttonLarge {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .buttonMedium {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Button Print Styles */
+@media print {
+  .buttonContainer {
+    background: transparent !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+} 

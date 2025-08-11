@@ -1,0 +1,161 @@
+/* Global Component Styles */
+/* This file contains styles that apply to multiple components across the application */
+
+@layer components {
+  /* Button Component Variants */
+  .btn-primary {
+    @apply bg-scan-primary-blue text-white px-4 py-2 rounded-md font-medium;
+    @apply hover:bg-blue-700 transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-scan-secondary-orange text-white px-4 py-2 rounded-md font-medium;
+    @apply hover:bg-orange-600 transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-scan-primary-blue text-scan-primary-blue px-4 py-2 rounded-md font-medium;
+    @apply hover:bg-scan-primary-blue hover:text-white transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  /* Card Component Variants */
+  .card {
+    @apply bg-white rounded-lg shadow-md border border-scan-border-gray;
+    @apply p-6 transition-shadow duration-200;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg hover:border-scan-primary-blue/20;
+  }
+
+  .card-elevated {
+    @apply shadow-xl border-0;
+  }
+
+  /* Form Component Styles */
+  .form-input {
+    @apply w-full px-3 py-2 border border-scan-border-gray rounded-md;
+    @apply focus:outline-none focus:ring-2 focus:ring-scan-primary-blue focus:border-transparent;
+    @apply transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-scan-text-dark mb-2;
+  }
+
+  .form-error {
+    @apply text-red-600 text-sm mt-1;
+  }
+
+  /* Navigation Component Styles */
+  .nav-link {
+    @apply text-scan-text-gray hover:text-scan-primary-blue transition-colors duration-200;
+    @apply font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-scan-primary-blue font-semibold;
+  }
+
+  /* Table Component Styles */
+  .table {
+    @apply w-full border-collapse;
+  }
+
+  .table-header {
+    @apply bg-scan-light-gray text-scan-text-dark font-semibold;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 border-b border-scan-border-gray;
+  }
+
+  .table-row {
+    @apply hover:bg-scan-light-gray/50 transition-colors duration-150;
+  }
+
+  /* Modal Component Styles */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center;
+    @apply z-50 p-4;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-lg shadow-xl max-w-md w-full mx-auto;
+    @apply transform transition-all duration-200;
+  }
+
+  /* Loading Component Styles */
+  .loading-spinner {
+    @apply animate-spin rounded-full border-4 border-scan-light-gray;
+    @apply border-t-scan-primary-blue;
+  }
+
+  .loading-skeleton {
+    @apply bg-scan-light-gray animate-pulse rounded;
+  }
+
+  /* Status Indicator Styles */
+  .status-success {
+    @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-warning {
+    @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-error {
+    @apply bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-info {
+    @apply bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  /* Layout Component Styles */
+  .sidebar {
+    @apply bg-scan-light-gray border-r border-scan-border-gray;
+    @apply min-h-screen w-64 p-4;
+  }
+
+  .main-content {
+    @apply flex-1 p-6 bg-white;
+  }
+
+  .page-header {
+    @apply mb-6 pb-4 border-b border-scan-border-gray;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold text-scan-text-dark;
+  }
+
+  .page-subtitle {
+    @apply text-scan-text-gray mt-1;
+  }
+
+  /* Responsive Utilities */
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .grid-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+
+  /* Animation Classes */
+  .fade-in {
+    @apply animate-in fade-in duration-300;
+  }
+
+  .slide-up {
+    @apply animate-in slide-in-from-bottom-4 duration-300;
+  }
+
+  .scale-in {
+    @apply animate-in zoom-in-95 duration-200;
+  }
+} 
