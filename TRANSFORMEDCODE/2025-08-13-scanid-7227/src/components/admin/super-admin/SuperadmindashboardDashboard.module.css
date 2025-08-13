@@ -1,0 +1,60 @@
+/* components/superadmindashboarddashboard.module.css */
+/* Component-specific styles following CSS Organization Guide */
+
+.container {
+  @apply w-full;
+  @apply responsive-layout;
+}
+
+.dashboardGrid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.dashboardCard {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  @apply hover:shadow-md transition-shadow duration-200;
+}
+
+.dashboardHeader {
+  @apply flex items-center justify-between mb-6;
+}
+
+.dashboardTitle {
+  @apply text-2xl font-semibold text-gray-900;
+}
+
+.dashboardStats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6;
+}
+
+.statCard {
+  @apply bg-gradient-to-r from-scan-primary-blue to-blue-600;
+  @apply text-white rounded-lg p-4 shadow-sm;
+}
+
+
+/* Theme-aware styles */
+.themeCard {
+  @apply theme-card;
+  --theme-primary: var(--scan-primary-blue);
+}
+
+.themeButton {
+  @apply theme-button;
+  background-color: var(--theme-primary);
+}
+
+.themeInput {
+  @apply theme-input;
+  border-color: var(--theme-primary);
+}
+
+[data-theme="dark"] .container {
+  @apply bg-gray-900 text-white;
+}
+
+[data-theme="dark"] .cardContainer {
+  @apply bg-gray-800 border-gray-700;
+}
+
