@@ -1,0 +1,188 @@
+# CSS Organization Update - 2. Scan ID Family New (View User Modal working)-1755025074276.zip
+
+## Generated CSS Modules
+
+Following the CSS Organization Guide, the following CSS module files were generated:
+
+### src/components/admin/super-admin/AppComponent.module.css
+
+```css
+/* appcomponent.module.css */
+/* Component-specific styles following CSS Organization Guide */
+
+.container {
+  @apply w-full;
+  @apply responsive-layout;
+}
+
+
+```
+
+### src/components/admin/super-admin/UsersmanagementManagement.module.css
+
+```css
+/* components/usersmanagementmanagement.module.css */
+/* Component-specific styles following CSS Organization Guide */
+
+.container {
+  @apply w-full;
+  @apply responsive-layout;
+}
+
+.managementContainer {
+  @apply space-y-6;
+}
+
+.managementHeader {
+  @apply flex items-center justify-between;
+}
+
+.managementTitle {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+.managementActions {
+  @apply flex items-center space-x-3;
+}
+
+.dataTable {
+  @apply w-full bg-white rounded-lg shadow-sm border border-gray-200;
+}
+
+.tableHeader {
+  @apply bg-gray-50 border-b border-gray-200;
+}
+
+.tableRow {
+  @apply border-b border-gray-100 hover:bg-gray-50 transition-colors;
+}
+
+.tableCell {
+  @apply px-4 py-3 text-sm text-gray-900;
+}
+
+.actionButton {
+  @apply text-scan-primary-blue hover:text-blue-700 font-medium;
+}
+
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideDown {
+  from { 
+    opacity: 0; 
+    transform: translateY(-20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+
+/* User emulation styles */
+.emulationBanner {
+  @apply bg-blue-100 border border-blue-300 text-blue-800 p-3 rounded-md;
+  @apply flex items-center justify-between mb-4;
+}
+
+.emulationButton {
+  @apply bg-blue-600 text-white px-3 py-1 rounded text-sm;
+  @apply hover:bg-blue-700 transition-colors duration-200;
+  @apply flex items-center space-x-2;
+}
+
+.emulationIcon {
+  @apply w-4 h-4;
+}
+
+.emulationText {
+  @apply font-medium;
+}
+
+.exitEmulation {
+  @apply text-blue-600 hover:text-blue-800 font-medium text-sm;
+}
+
+
+```
+
+### src/components/features/user-management/AuthHandlersForm.module.css
+
+```css
+/* supabase/functions/server/authhandlersform.module.css */
+/* Component-specific styles following CSS Organization Guide */
+
+.container {
+  @apply w-full;
+}
+
+.formContainer {
+  @apply max-w-2xl mx-auto space-y-6;
+}
+
+.formGroup {
+  @apply space-y-2;
+}
+
+.formLabel {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.formInput {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm;
+  @apply focus:outline-none focus:ring-2 focus:ring-scan-primary-blue focus:border-transparent;
+}
+
+.formError {
+  @apply text-sm text-red-600;
+}
+
+.formActions {
+  @apply flex items-center justify-end space-x-3 pt-4;
+}
+
+.submitButton {
+  @apply bg-scan-primary-blue text-white px-4 py-2 rounded-md;
+  @apply hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-scan-primary-blue;
+  @apply transition-colors duration-200;
+}
+
+
+```
+
+## Features
+
+- Component-specific CSS modules
+- Theme-aware styling with CSS variables
+- Responsive design patterns
+- Role-based UI styling
+- Consistent with CSS Organization Guide
+- @apply directives for Tailwind integration
