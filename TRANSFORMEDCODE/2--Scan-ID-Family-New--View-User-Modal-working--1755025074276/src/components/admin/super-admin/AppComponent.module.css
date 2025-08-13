@@ -1,8 +1,0 @@
-/* appcomponent.module.css */
-/* Component-specific styles following CSS Organization Guide */
-
-.container {
-  @apply w-full;
-  @apply responsive-layout;
-}
-
